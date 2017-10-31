@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Migration1 extends Migration
+class AddIsFeatureInPostTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,8 @@ class Migration1 extends Migration
      */
     public function up()
     {
-        //
+        table -> string('title',500)-> change();
+        table -> boolean('is_feature')-> default(false)-> after('content');
     }
 
     /**
